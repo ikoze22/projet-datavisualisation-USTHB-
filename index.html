@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title> USTHB MAP</title>
+		<script type="text/javascript" src="d3.v3.js"></script>
+        <script type="text/javascript" src="d3.v4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+		<script src="https://d3js.org/d3-array.v2.min.js"></script>
+        <script src="https://unpkg.com/topojson@3"></script>
+
+		<style>
+
+		  * {
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+        }
+        .center {
+            text-align: center;
+        }
+        
+        h1, h2, h3, h4, h5, h6 ,label {
+            color: #ffffff;
+            font-weight: 100;
+        }
+
+        body {
+            background-color: #00205b;
+            margin: 30px;
+            
+        }
+        
+
+      input{
+        margin-right: 20px;
+
+      }
+
+        .bloc:hover{
+        fill: rgb(65, 1, 65);
+         }
+		.bloc{
+		fill: rgba(0, 0, 0, 0.24);
+		stroke: black;
+		}
+
+        
+        .tooltip{
+            position: absolute;
+            display: inline-block;
+            text-align: left;
+            background-color:  rgb(65, 1, 65);
+            opacity: 0.9;
+            border: solid;
+            border-width: 1px;
+            border-radius: 3px ;
+            visibility: hidden;
+            padding: 5px;
+        }
+
+        .button{
+            border: 3px solid rgb(65, 1, 65) ;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration-color: black;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration:0.4s ;
+            cursor: pointer;
+        }
+        .button:hover{
+            background-color:rgb(65, 1, 65) ;
+            color: white;
+            text-decoration-color: #ffffff;
+        }
+     
+		</style>
+		
+	</head>
+	<body>
+        <h1 class="center"> USTHB map  </h1>
+        <label> List des heurs : </label>
+        <input type="text" id="heurs" list="heure" placeholder="choisir heure" >
+        <label>  List des jours : </label>
+        <input type="text" id="days" list="day" placeholder="choisir jour" >
+        <label>  List des Spécialité : </label>
+        <input type="text" id="specs" list="spec" placeholder="choisr Spécialité " >
+        <button id= "show"  onclick="show(this)"  class = "button"> Afficher </button>
+        
+
+        <script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
